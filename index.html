@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ディレイタイム計算アプリ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="tabs">
+            <div class="tab active" id="tab-bpm">BPM → ディレイタイム</div>
+            <div class="tab" id="tab-ms">ms → BPM</div>
+        </div>
+        <div class="input-area">
+            <div id="bpm-input-area">
+                <label for="bpm">BPM: <input type="number" id="bpm" min="1"></label>
+                <button onclick="calculateDelayTimes()">計算</button>
+            </div>
+            <div id="ms-input-area" style="display:none;">
+                <label for="ms">ディレイタイム(ms): <input type="number" id="ms" min="1"></label>
+                <button onclick="calculateBPMs()">計算</button>
+            </div>
+        </div>
+        <div class="results" id="results"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
